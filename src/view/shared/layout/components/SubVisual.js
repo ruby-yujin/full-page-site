@@ -11,11 +11,13 @@ const SubVisual = () => {
   const pageTitle = String(location.pathname);
   // const onlyText = pageTitle.replace("/",'');
   const onlyText = pageTitle.split('/')[1];
+  const onlyTextMotion = pageTitle.split('/')[1].split('');
 
   const onHandleLoad = (e) => {
     const bgMotion = document.querySelector('.background');
     bgMotion.classList.add('loaded');
   };
+  console.log({ onlyTextMotion });
   return (
     <Container>
       <Background className={cn('background')} onLoad={onHandleLoad}>
@@ -24,10 +26,14 @@ const SubVisual = () => {
       <Title>
         <p>
           {subTitle.map((item) => {
-            return <div key={item.code}>{item.code === onlyText ? item.subject : ''}</div>;
+            return <span key={item.code}>{item.code === onlyText ? item.subject : ''}</span>;
           })}
         </p>
-        <h2>{onlyText}</h2>
+        <h2>
+          {onlyTextMotion.map((item) => {
+            return <span>{item}</span>;
+          })}
+        </h2>
       </Title>
     </Container>
   );
@@ -63,6 +69,52 @@ const Title = styled.div`
     color: #fff;
     text-transform: uppercase;
     margin-top: 20px;
+    span {
+      opacity: 0;
+      animation: fade-in 0.2s ease-in forwards;
+
+      &:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.5s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(6) {
+        animation-delay: 0.7s;
+      }
+      &:nth-child(7) {
+        animation-delay: 0.8s;
+      }
+      &:nth-child(8) {
+        animation-delay: 0.9s;
+      }
+      &:nth-child(9) {
+        animation-delay: 1s;
+      }
+      &:nth-child(10) {
+        animation-delay: 1.1s;
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        transform: translateX(-2em);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   }
   @media screen and (max-width: 1024px) {
     top: initial;
