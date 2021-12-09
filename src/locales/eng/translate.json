@@ -26,17 +26,112 @@
   "subPage" : {
     "subTitle": [
       {
-        "company" : "회사소개"
+        "code": "company",
+        "subject" : "회사소개"
       },
       {
-        "team" : "조직도"
+        "code": "team",
+        "subject" : "조직도"
       },
       {
-        "investment" : "투자정보"
+        "code": "investment",
+        "subject" : "투자정보"
       },
       {
-        "notice" : "공지사항"
+        "code": "notice",
+        "subject" : "공지사항"
       }
+    ]
+  },
+  "common" : {
+    "info" : [
+      {
+        "address" : "Address",
+        "companyAddress" : " Seoul Gangnamgu Teheranro 207, 13th floor",
+        "tel": "TEL"
+      }
+    ]
+  },
+  "company":{
+    "text": [
+      {
+        "title": " About<br/>Bridge Investment ",
+        "description" : "Founded in January 2021, Bridge Investment is <br/>a venture capital firm in Seoul. We are stage agonistic: <br/>We invest in promising industries and technology, <br/>discover and support SMEs with great potential <br/>based on our professional investment ability. <br/><br/>We support and respect the vision  <br/>and the investment philosophy of the entrepreneur. <br/>We aim to be your reliable partner."
+      }
+    ]
+  },
+  "team" : {
+    "colleague" : [
+      {
+        "ceo" :" CEO",
+        "junhyukLee" : "Junhyuk Lee",
+        "managingPartner": "Managing Partner",
+        "complianceOfficer" : "Compliance Officer",
+        "aramLee" : "Aram Lee",
+        "investmentDivison" : "Investment Divison",
+        "jasonJung" : "Jason Jung",
+        "director" : "Director",
+        "paulLim" : "PaulLim",
+        "hyunhoCho" : "Hyunho Cho",
+        "associate": "Associate",
+        "ethanPark":"Ethan Park",
+        "analyst":"Analyst",
+        "managementSupport":"Management Support",
+        "soojinPark":"Soojin Park",
+        "principal":"Principal"
+      }
+    ]
+  },
+  "investment" : {
+    "text" : [
+      {
+        "id" : 0,
+        "title":"Investment in the <br/>new technology company",
+        "description":"We invest in companies <br/>that develop new technologies or commercialize them. <br/>(Stocks, Mezzanine ,etc.)"
+      },
+      {
+        "id" : 1,
+        "title":"Business and <br/>Technical Support",
+        "description":"We support New Technology Companies <br/>through business and technical support, <br/>consulting from the early-stage to Pre-IPO"
+      },
+      {
+        "id" : 2,
+        "title":"Bridge Investment is <br/>a new technology fiance company <br/>that invest in new technology companies <br/>and venture companies.",
+        "description":""
+      },
+      {
+        "id" : 3,
+        "title":"Investment Fund Formation <br/>and Operation",
+        "description":"Form and manage funds to invest in new technology companies."
+      }
+    ]
+  },
+  "noticeList" : {
+    "List" : [
+      {
+        "id":3,
+        "title":"브릿지인베스트먼트 전반에 대한 다양한 읽을거리333333333333",
+        "date":"2021-11-05",
+        "by":""
+    },
+    {
+        "id":2,
+        "title":"브릿지인베스트먼트 전반에 대한 다양한 읽을거리2222222",
+        "date":"2021-05-11",
+        "by":""
+    },
+    {
+        "id":1,
+        "title":"브릿지인베스트먼트 전반에 대한 다양한 읽을거리1111111",
+        "date":"2021-03-20",
+        "by":""
+    },
+    {
+        "id": 0 ,
+        "title":"브릿지인베스트먼트 전반에 대한 다양한 읽을거리000000",
+        "date":"2021-01-05",
+        "by":""
+    }
     ]
   },
   "noticeDetail": {

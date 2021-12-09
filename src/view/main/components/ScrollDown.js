@@ -14,7 +14,7 @@ const ScrollDown = () => {
   };
 
   return (
-    <Container>
+    <Container className="hidden-mobile">
       <Lottie options={defaultOptions} height={68} width={68} />
     </Container>
   );

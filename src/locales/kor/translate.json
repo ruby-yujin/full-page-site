@@ -3,7 +3,7 @@
     "visual": [
       {
         "subTitle": "현재와 미래의 가치를 잇는 브릿지인베스트먼트",
-        "title": "We connect values from \nthe Present with the Future",
+        "title": "We connect values from \nthe present with the future",
         "src": "/assets/img/main/01.mp4",
         "srcMobile": "/assets/img/main/01.jpg"
       }
@@ -40,6 +40,70 @@
       {
         "code": "notice",
         "subject" : "공지사항"
+      }
+    ]
+  },
+  "common" : {
+    "info" : [
+      {
+        "address" : "주 소",
+        "companyAddress" : "서울특별시 강남구 테헤란로 207, 13층",
+        "tel": "전화번호"
+      }
+    ]
+  },
+  "company":{
+    "text": [
+      {
+        "title": " 안녕하십니까.<br />브릿지인베스트먼트입니다.",
+        "description" : "브릿지인베스트먼트 홈페이지를 방문해주셔서 감사합니다. <br className='hidden-mobile' />브릿지인베스트먼트는 전문 인력의 투자 역량을 바탕으로 <br className='hidden-mobile' />유망 산업 및 기술 앞 선도적 투자, 성장성 높은 중소·벤처기업의 <br className='hidden-mobile' /> 발굴 및지원을 위해 2021년 1월에 설립되었습니다. <br className='hidden-mobile' />기업의 비전 및 투자 철학을 지지하며 긴밀한 소통을 통해 <br className='hidden-mobile' /> 함께 성장하고,신뢰할 수 있는 파트너가 되겠습니다."
+      }
+    ]
+    
+  },
+  "team" : {
+    "colleague" : [
+      {
+        "ceo" :"대표이사 ",
+        "junhyukLee" : "이준혁",
+        "managingPartner": "경영총괄",
+        "complianceOfficer" : "컴플라이언스",
+        "aramLee" : "이아람 부장",
+        "investmentDivison" : "투자본부",
+        "jasonJung" : "Jason 이사",
+        "director" : "Director",
+        "paulLim" : "임정욱 이사",
+        "hyunhoCho" : "조현호 심사역",
+        "associate" : "투자심사",
+        "ethanPark" : "박정은 조사역",
+        "analyst" : "투자심사",
+        "managementSupport" : "관리본부",
+        "soojinPark" : "박수진 팀장",
+        "principal" : "Principal"
+      }
+    ]
+  },
+  "investment" : {
+    "text" : [
+      {
+        "id" : 0,
+        "title":"신기술사업자에 대한 투자",
+        "description":"신기술을 개발하거나 이를 응용하여 사업화하는 신기술사업자에 대한 투자<br/>(주식, 메자닌 등)"
+      },
+      {
+        "id" : 1,
+        "title":"신기술사업자를 위한 <br/> 사업 및 기술적 지원",
+        "description":"창업 초기 ~ IPO 준비 기업을 위한 경영 및 기술 지원, 컨설팅"
+      },
+      {
+        "id" : 2,
+        "title":"브릿지인베스트먼트는 신기술사업자에 <br/> 대한 투자를 목적으로 설립된 <br/>신기술사업금융 전문회사입니다.",
+        "description":""
+      },
+      {
+        "id" : 3,
+        "title":"신기술사업투자조합 <br/> 설립 및 운용",
+        "description":"신기술사업자를 대상으로 투자를 진행하는 조합(Fund) 설립 및 <br/> 자금관리운용"
       }
     ]
   },
@@ -110,6 +174,33 @@
         }
       }
     ]
+  },
+  "ir" : {
+    "downfile" : [
+      {
+        "data": {
+          "year": "2021",
+          "title":"브릿지인베스트먼트 기관 대상 공시자료1",
+          "period": "(2021.11.11 ~ 2021.11.11) ",
+          "fileSrc" :"/download/file/브릿지인베스트먼트_20211206.pdf"
+        }
+      },
+      {
+        "data": {
+          "year": "2021",
+          "title":"브릿지인베스트먼트 기관 대상 공시자료2",
+          "period": "(2021.11.11 ~ 2021.11.11) ",
+          "fileSrc" :"/download/file/test2.pdf"
+        }
+      },
+      {
+        "data": {
+          "year": "2021",
+          "title":"브릿지인베스트먼트 기관 대상 공시자료3",
+          "period": "(2021.11.11 ~ 2021.11.11)",
+          "fileSrc" :"/download/file/test3.pdf"
+        }
+      }
+    ]
   }
-
 }

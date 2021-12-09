@@ -114,9 +114,12 @@ const DetailCenter = styled.div`
 `;
 
 const Text = styled.div`
-  width: 800px;
+  width: 1100px;
   margin: 0 auto;
   color: #555;
+  font-size: 18px;
+  line-height: 1.78;
+  letter-spacing: -0.56px;
   @media screen and (max-width: 1600px) {
     width: 100%;
   }
@@ -153,7 +156,7 @@ const PrevBtn = styled(Link)`
     color: #bbb;
   }
   strong {
-    font-weight: bold;
+    font-weight: 500;
     display: block;
     color: #555;
   }
@@ -181,7 +184,7 @@ const NextBtn = styled(Link)`
     color: #bbb;
   }
   strong {
-    font-weight: bold;
+    font-weight: 500;
     display: block;
     color: #555;
   }
@@ -208,7 +211,7 @@ const PrevBtnNoLink = styled.div`
     color: #bbb;
   }
   strong {
-    font-weight: bold;
+    font-weight: 500;
     display: block;
     color: #555;
   }
@@ -235,7 +238,7 @@ const NextBtnNoLink = styled.div`
     color: #bbb;
   }
   strong {
-    font-weight: bold;
+    font-weight: 500;
     display: block;
     color: #555;
   }
@@ -250,11 +253,14 @@ const ListBtn = styled(Link)`
   align-items: center;
   width: 60px;
   height: 60px;
-
+  background-color: #333;
   i {
     display: block;
     font-size: 18px;
     color: #fff;
+  }
+  &:hover {
+    background-color: #ef8226;
   }
 `;
 export default NoticeDetailCotents;

@@ -17,7 +17,6 @@ const SubVisual = () => {
     const bgMotion = document.querySelector('.background');
     bgMotion.classList.add('loaded');
   };
-  console.log({ onlyTextMotion });
   return (
     <Container>
       <Background className={cn('background')} onLoad={onHandleLoad}>
@@ -25,14 +24,20 @@ const SubVisual = () => {
       </Background>
       <Title>
         <p>
-          {subTitle.map((item) => {
-            return <span key={item.code}>{item.code === onlyText ? item.subject : ''}</span>;
-          })}
+          {
+            // eslint-disable-next-line react/jsx-key
+            subTitle.map((item) => {
+              return <span key={item.code}>{item.code === onlyText ? item.subject : ''}</span>;
+            })
+          }
         </p>
         <h2>
-          {onlyTextMotion.map((item) => {
-            return <span>{item}</span>;
-          })}
+          {
+            // eslint-disable-next-line react/jsx-key
+            onlyTextMotion.map((item) => {
+              return <span>{item}</span>;
+            })
+          }
         </h2>
       </Title>
     </Container>

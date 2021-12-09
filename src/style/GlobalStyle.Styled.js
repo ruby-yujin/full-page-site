@@ -81,9 +81,12 @@ export const GlobalStyle = createGlobalStyle`
     .hidden-mobile {
         display: block;
         transition: 1s 0.4s;
-      @media screen and (max-width:1024px) {
-        display:none;
-      }
+        @media screen and (max-width: 1600px) and (min-width: 1024px) {
+          display:none;
+        }
+        @media screen and (max-width:1024px) {
+          display: none;
+        }
     }
     .hidden-desktop {
       display: none;

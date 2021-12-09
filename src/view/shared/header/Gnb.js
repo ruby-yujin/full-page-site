@@ -1,19 +1,20 @@
-import React, {useState, useRef} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
-import {Link} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LanguageMobile from './LanguageMobile';
 
-
-const Gnb = ({isActive}) => {
+const Gnb = ({ isActive }) => {
+  const location = useLocation();
+  const pageTitle = String(location.pathname);
   return (
-    <Container className={cn("Gnb", {isActive})}>
+    <Container className={cn('Gnb', { isActive })}>
       <Nav>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/company">Comany</Link>
+          <Link to="/company">Company</Link>
         </li>
         <li>
           <Link to="/team">Team</Link>
@@ -22,14 +23,13 @@ const Gnb = ({isActive}) => {
           <Link to="/investment">Investment</Link>
         </li>
         <li>
-          <Link to="/notice">notice</Link>
+          <Link to="/notice/news">notice</Link>
         </li>
       </Nav>
-      <LanguageMobile/>
+      <LanguageMobile />
     </Container>
-  )
+  );
 };
-
 
 const Container = styled.div`
   position: fixed;
@@ -75,7 +75,7 @@ const Nav = styled.ul`
         position: absolute;
         height: 1px;
         transform: scaleX(0);
-        transition: all .4s;
+        transition: all 0.4s;
         top: 50%;
         margin-top: 2px;
         left: -15px;
@@ -94,15 +94,12 @@ const Nav = styled.ul`
       }
     }
   }
-  @media screen and (max-width:1024px) {
-    li{
-      font-size:34px;
+  @media screen and (max-width: 1024px) {
+    li {
+      font-size: 34px;
       margin-bottom: 2rem;
     }
   }
 `;
-
-
-
 
 export default Gnb;

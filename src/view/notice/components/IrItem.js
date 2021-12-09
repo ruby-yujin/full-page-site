@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const IrItem = ({ item }) => {
   return (
-    <Container>
-      <span>{item.date}</span>
+    <Container to={item.data.fileSrc} download target="_blank">
+      <span>{item.data.date}</span>
       <p>
-        {item.title}
-        <span>{item.period}</span>
+        {item.data.title}
+        <span>{item.data.period}</span>
       </p>
 
       <DownBtn>
@@ -17,7 +18,7 @@ const IrItem = ({ item }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled(Link)`
   height: 250px;
   padding: 40px;
   border: solid 1px #e0e0e0;
@@ -34,6 +35,7 @@ const Container = styled.div`
     font-size: 18px;
     color: #000;
     line-height: 1.44;
+
     span {
       font-size: 18px;
       color: #000;
@@ -62,15 +64,19 @@ const Container = styled.div`
   @media screen and (max-width: 1024px) {
     height: 150px;
     padding: 20px;
+    margin: 5px 0;
+
     span {
       font-size: 14px;
+      margin-bottom: 10px;
     }
     p {
       font-size: 16px;
-      white-space: pre;
+      white-space: initial;
       span {
         display: block;
         font-size: 13px;
+        line-height: 1.69;
         color: #222;
       }
     }

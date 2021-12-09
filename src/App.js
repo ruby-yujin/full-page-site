@@ -1,8 +1,8 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { Route, Routes} from 'react-router-dom';
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Route, Routes } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { GlobalStyle } from './style/GlobalStyle.Styled';
 import Main from './pages/Main';
@@ -17,28 +17,24 @@ import Ir from './pages/Ir';
 const App = () => {
   useEffect(() => {
     AOS.init();
-  })
+  });
 
-  return(
+  return (
     <Container>
-    <GlobalStyle />
-    <Routes>
-      <Route exact path="/" element={<Main/>} />
-      <Route exact path="/company" element={<Company/>} />
-      <Route exact path="/team" element={<Team/>} />
-      <Route exact path="/investment" element={<Investment/>} />
-      <Route exact path="/notice" element={<Notice/>} />
-      <Route exact path="/notice/:id" element={<NoticeDetail/>} />
-      <Route exact path="/ir" element={<Ir/>} />
-    </Routes>
-  </Container>
-  )
-
+      <GlobalStyle />
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+        <Route exact path="/company" element={<Company />} />
+        <Route exact path="/team" element={<Team />} />
+        <Route exact path="/investment" element={<Investment />} />
+        <Route exact path="/notice/news" element={<Notice />} />
+        <Route exact path="/notice/news/:id" element={<NoticeDetail />} />
+        <Route exact path="/notice/ir" element={<Ir />} />
+      </Routes>
+    </Container>
+  );
 };
 
-const Container = styled.div `
-
-
-`;
+const Container = styled.div``;
 
 export default App;

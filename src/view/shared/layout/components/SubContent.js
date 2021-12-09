@@ -10,11 +10,8 @@ const SubContent = ({ children }) => {
   const location = useLocation();
   const pageTitle = String(location.pathname);
   const onlyText = pageTitle.split('/')[1];
+  const noticeLocation = pageTitle.split('/')[2];
   const details = t('noticeDetail.text', { returnObjects: true });
-
-  // if(details?.[id]?.data?.title) {
-  //   console.log(`> ${details?.[id]?.data?.title}`)
-  // }
 
   return (
     <Container>
@@ -23,8 +20,14 @@ const SubContent = ({ children }) => {
           <i className="icon-home"></i> HOME <i className="icon-path-4"></i> {onlyText}
           {details?.[id] ? (
             <>
-              {' '}
               <i className="icon-path-4"></i> {details?.[id]?.data?.title}
+            </>
+          ) : (
+            <></>
+          )}
+          {noticeLocation ? (
+            <>
+              <i className="icon-path-4"></i> {noticeLocation}
             </>
           ) : (
             <></>
@@ -43,16 +46,18 @@ const Container = styled.div`
 const SubContentWrap = styled.div`
   margin: 0 auto;
   max-width: 1600px;
-  min-height: 900px;
   position: relative;
   top: -200px;
   background: #fff;
-  padding: 70px 200px;
-  @media screen and (max-width: 1024px) {
+  padding: 70px 200px 0;
+  @media screen and (max-width: 1600px) and (min-width: 1024px) {
+    padding: 70px 45px 0;
+  }
+  @media (max-width: 1024px) {
     position: initial;
     min-height: auto;
     top: initial;
-    padding: 30px 20px;
+    padding: 30px 20px 80px;
   }
 `;
 

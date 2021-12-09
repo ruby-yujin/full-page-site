@@ -6,17 +6,16 @@ const Tab = () => {
   // const history = useHistory();
   const location = useLocation();
   const pageTitle = String(location.pathname);
-  const pagePath = pageTitle.split('/')[1];
   // const params = useParams();
-  // console.log('이거 path야',pagePath);
+  console.log('이거 pageTitle', pageTitle);
 
   return (
     <Container>
-      <li className={pagePath === 'notice' ? 'is-Active' : ''}>
-        <Link to="/notice">NOTICE</Link>
+      <li className={pageTitle === '/notice/news' ? 'isActive' : ''}>
+        <Link to="/notice/news">News</Link>
       </li>
-      <li className={pagePath === 'ir' ? 'is-Active' : ''}>
-        <Link to="/ir">IR</Link>
+      <li className={pageTitle === '/notice/ir' ? 'isActive' : ''}>
+        <Link to="/notice/ir">IR</Link>
       </li>
     </Container>
   );
@@ -36,7 +35,7 @@ const Container = styled.ul`
       padding: 28px 0;
       text-transform: uppercase;
     }
-    &.is-Active {
+    &.isActive {
       a {
         color: #000;
         box-shadow: 0 2px 0 0 #111;

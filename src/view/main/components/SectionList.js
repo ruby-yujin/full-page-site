@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import ReactPageScroller from '../../../lib/Fullpage';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
+import { useIntersectionObserverRef } from 'rooks';
 
 import Section from './Section';
 import Visual from './Visual';
-import { useTranslation } from 'react-i18next';
+import Footer from '../../../view/shared/Footer';
 
 const SectionList = () => {
   const { t } = useTranslation();
   const visual = t('main.visual', { returnObjects: true });
   const sections = t('main.sections', { returnObjects: true });
-  // console.log('sections',sections)
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const [currentPage, setCurrentPage] = useState(null);
+  console.log(currentPage);
 
   const handlePageChange = (number) => {
     setCurrentPage(number);
   };
 
-  const handleBeforePageChange = (number) => {
-    console.log(number);
+  const handleBeforePageChange = () => {
+    return currentPage;
   };
 
   const getPagesNumbers = () => {
     const pageNumbers = [];
-
     return [...pageNumbers];
   };
 
@@ -51,10 +52,18 @@ const SectionList = () => {
           ))
         }
       </ReactPageScroller>
+
+      <Footer className={currentPage === 2 ? 'show' : ''} />
     </Container>
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  transition: all 1s;
+  margin-top: 0;
+  &.isActive {
+    margin-top: -180px;
+  }
+`;
 
 export default SectionList;

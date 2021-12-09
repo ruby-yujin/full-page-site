@@ -6,6 +6,7 @@ import cn from 'classnames';
 const Language = () => {
   const { t, i18n } = useTranslation();
   const [isLangsOpen, setIsLangeOpen] = useState(false);
+  const currentLang = i18n.resolvedLanguage;
 
   const toggleLangs = () => {
     setIsLangeOpen((v) => !v);
@@ -18,11 +19,11 @@ const Language = () => {
   };
 
   return (
-    <Container className={cn('Language', 'hidden-mobile', { isLangsOpen })}>
+    <Container className={cn('Language', { isLangsOpen })}>
       <LanguageOpen onClick={toggleLangs}>Language</LanguageOpen>
       <LanguageList>
         {langs.map((lang) => (
-          <LanguageBtn key={lang} onClick={() => changeLang(lang)}>
+          <LanguageBtn key={lang} onClick={() => changeLang(lang)} className={currentLang === lang ? 'isActive' : ''}>
             {lang}
           </LanguageBtn>
         ))}
@@ -34,6 +35,9 @@ const Language = () => {
 const Container = styled.div`
   margin-right: 30px;
   position: relative;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 const LanguageOpen = styled.button`
   display: block;
@@ -72,6 +76,7 @@ const LanguageBtn = styled.button`
   &:first-child {
     border-bottom: 1px solid #323232;
   }
+  &.isActive,
   &:hover {
     color: #ef8226;
   }

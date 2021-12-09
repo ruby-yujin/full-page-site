@@ -8,7 +8,7 @@ import { Overlay } from '../../../common/Layout.Styled';
 const Section = ({ item }) => {
   const [sectionRef, inView] = useInViewRef(
     () => {
-      // console.log('inVIEW');
+      // console.log('section inVIEW');
     },
     { rootMargin: '-300px 0px' }
   );
@@ -17,7 +17,8 @@ const Section = ({ item }) => {
     <Container className={cn({ inView })} ref={sectionRef}>
       <Background>
         <figure>
-          <video src={item.src} autoPlay loop muted></video>
+          <video src={item.src} autoPlay loop muted className="hidden-mobile"></video>
+          <img src={item.srcMobile} className="hidden-desktop" alt="" />
         </figure>
         <Overlay alpha={0.1} />
       </Background>
@@ -67,7 +68,7 @@ const Title = styled.h2`
   font-size: 58px;
   font-weight: bold;
   line-height: 1.2;
-  transition: 1s 0.4s;
+  transition: all 1.5s ease-in-out;
   transform: translateY(100px);
   opacity: 0;
   margin-top: 20px;
@@ -85,7 +86,7 @@ const Description = styled.p`
   font-size: 26px;
   line-height: 2.19;
   letter-spacing: -0.87px;
-  transition: 1s 0.5s;
+  transition: all 1.5s ease-in-out;
   transform: translateY(100px);
   opacity: 0;
   .inView & {

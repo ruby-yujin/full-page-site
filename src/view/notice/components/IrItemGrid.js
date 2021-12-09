@@ -1,32 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import IrItem from './IrItem';
+import { useTranslation } from 'react-i18next';
 
 const IrItemGrid = () => {
-  const irContentsItem = [
-    {
-      date: '2021',
-      title: '브릿지인베스트먼트 \n기관 대상 공시자료',
-      period: '(2021.11.11 ~ 2021.11.11) ',
-      src: 'zzzzzzz',
-    },
-    {
-      date: '2021',
-      title: '브릿지인베스트먼트 \n기관 대상 공시자료',
-      period: '(2021.11.11 ~ 2021.11.11)',
-      src: 'zzzzzzz',
-    },
-    {
-      date: '2021',
-      title: '브릿지인베스트먼트 \n기관 대상 공시자료',
-      period: '(2021.11.11 ~ 2021.11.11)',
-      src: 'zzzzzzz',
-    },
-  ];
+  const { t } = useTranslation();
+  const irDownload = t('ir.downfile', { returnObjects: true });
+
   return (
     <Container>
       <Row>
-        {irContentsItem.map((item) => (
+        {irDownload.map((item) => (
           <Col key={item.title}>
             <IrItem item={item} />
           </Col>
@@ -47,6 +31,9 @@ const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+  @media screen and (max-width: 1024px) {
+    margin: 15px 0 0;
+  }
 `;
 
 const Col = styled.div`
@@ -54,6 +41,7 @@ const Col = styled.div`
   padding: 15px;
   @media screen and (max-width: 1024px) {
     width: 100%;
+    padding: 0;
   }
 `;
 

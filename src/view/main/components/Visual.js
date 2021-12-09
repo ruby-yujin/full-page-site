@@ -22,10 +22,12 @@ const Visual = ({ item }) => {
         </Contents>
         <Background>
           <figure>
-            <video src="/assets/img/main/01.mp4" autoPlay loop muted></video>
+            <video src="/assets/img/main/01.mp4" autoPlay loop muted className="hidden-mobile"></video>
+            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" className="hidden-desktop" />
           </figure>
         </Background>
-        <ScrollDown className="hidden-mobile" />
+        <ScrollDown />
+        <i className="icon-down hidden-desktop"></i>
       </VisualInner>
     </Container>
   );
@@ -89,7 +91,7 @@ const Contents = styled.div`
     font-size: 60px;
     font-weight: bold;
     line-height: 1.5;
-    transition: 1s 0.4s;
+    transition: all 1.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
     margin-top: 20px;

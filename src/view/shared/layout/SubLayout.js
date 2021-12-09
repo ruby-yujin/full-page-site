@@ -5,26 +5,17 @@ import SubContent from './components/SubContent';
 import Header from '../header/Header';
 import Footer from '../Footer';
 
-const SubLayout = ({children}) => {
-    return (
+const SubLayout = ({ children }) => {
+  return (
     <Container>
-        <Header/>
-        <SubVisual/>
-        <SubContent>
-            {children}
-        </SubContent>
-        <Footer/>
+      <Header />
+      <SubVisual />
+      <SubContent>{children}</SubContent>
+      <Footer className="default" />
     </Container>
-    );
+  );
 };
 
-
-
-
-const Container = styled.div `
-
- 
-`;
-
+const Container = styled.div``;
 
 export default SubLayout;

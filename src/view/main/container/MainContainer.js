@@ -7,10 +7,10 @@ const MainContainer = () => (
   <Container>
     <SectionList />
   </Container>
-)
+);
 
 const Container = styled.div`
-
+  overflow-x: hidden;
 `;
 
 export default MainContainer;
