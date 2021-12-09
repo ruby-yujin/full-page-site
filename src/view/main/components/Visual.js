@@ -102,8 +102,10 @@ const Contents = styled.div`
   }
   @media screen and (max-width: 1024px) {
     width: 100%;
-    padding: 0 5%;
+    padding: 0 2%;
     text-align: center;
+    max-width: 100%;
+    margin-top: -270px;
     p {
       font-size: 16px;
       line-height: 1.88;

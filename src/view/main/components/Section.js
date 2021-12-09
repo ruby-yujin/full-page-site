@@ -17,8 +17,8 @@ const Section = ({ item }) => {
     <Container className={cn({ inView })} ref={sectionRef}>
       <Background>
         <figure>
-          <video src={item.src} autoPlay loop muted className="hidden-mobile"></video>
-          <img src={item.srcMobile} className="hidden-desktop" alt="" />
+          <video src={item.src} autoPlay loop muted></video>
+          <img src={item.srcMobile} alt="" />
         </figure>
         <Overlay alpha={0.1} />
       </Background>
@@ -54,6 +54,17 @@ const Background = styled.div`
       height: 100% !important;
       object-fit: cover;
     }
+    img {
+      display: none;
+    }
+    @media screen and (max-width: 1024px) {
+      img {
+        display: block;
+      }
+      video {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -62,6 +73,10 @@ const Contents = styled.div`
   width: 100%;
   text-align: center;
   color: #fff;
+  @media screen and (max-width: 1024px) {
+    padding: 0 5%;
+    top: -100px;
+  }
 `;
 
 const Title = styled.h2`
