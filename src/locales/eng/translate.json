@@ -2,22 +2,22 @@
   "main": {
     "visual": [
       {
-        "subTitle": "(EN) 현재와 미래의 가치를 잇는 브릿지인베스트먼트",
-        "title": "(EN) We connect values from\nthe Present with the Future",
+        "subTitle": "현재와 미래의 가치를 잇는 브릿지인베스트먼트",
+        "title": "We connect values from\nthe Present with the Future",
         "src": "/assets/img/main/01.mp4",
         "srcMobile": "/assets/img/main/01.jpg"
       }
     ],
     "sections": [
       {
-        "title": "(EN번역) We invest innovations from the ordinary",
-        "description": "(EN번역) 우리는 평범함 속에서 탁월함을 찾아 투자하고,",
+        "title": "We invest innovations from the ordinary",
+        "description": "우리는 평범함 속에서 탁월함을 찾아 투자하고,",
         "src": "/assets/img/main/02.mp4",
         "srcMobile": "/assets/img/main/02.jpg"
       },
       {
-        "title": "(EN번역) 우리는 일상 속에서 혁신을 발견합니다",
-        "description": "(EN번역) We find excellence in trivial",
+        "title": "우리는 일상 속에서 혁신을 발견합니다",
+        "description": "We find excellence in trivial",
         "src": "/assets/img/main/03.mp4",
         "srcMobile": "/assets/img/main/03.jpg"
       }
