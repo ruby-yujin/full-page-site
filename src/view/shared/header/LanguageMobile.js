@@ -6,8 +6,6 @@ import cn from 'classnames';
 const LanguageMobile = () => {
   const { t, i18n } = useTranslation();
   const [isLangsOpen, setIsLangeOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-
   const langs = ['kor', 'eng'];
   const currentLang = i18n.resolvedLanguage;
 
@@ -15,13 +13,10 @@ const LanguageMobile = () => {
     i18n.changeLanguage(lang);
   };
 
-  console.log('현재  언어', i18n.resolvedLanguage);
-
   return (
     <Container className={cn('Language', 'hidden-desktop', { isLangsOpen })}>
       <LanguageList>
         {langs.map((lang) => {
-          console.log(currentLang === lang);
           return (
             <LanguageBtn key={lang} onClick={() => changeLang(lang)} className={currentLang === lang ? 'isActive' : ''}>
               {lang}
@@ -36,7 +31,7 @@ const LanguageMobile = () => {
 const Container = styled.div`
   position: absolute;
   /* top:550px; */
-  top: 70%;
+  top: 73%;
 `;
 
 const LanguageList = styled.div`

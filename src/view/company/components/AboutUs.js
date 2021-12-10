@@ -27,13 +27,13 @@ const AboutUs = () => {
         </Top>
         <Bottom>
           <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1600">
-            <img src="/assets/img/sub/company_02.webp" alt="" />
+            <img src="/assets/img/sub/company_02.jpg" alt="" />
           </ImgSm>
           <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2200">
-            <img src="/assets/img/sub/company_03.webp" alt="" />
+            <img src="/assets/img/sub/company_03.jpg" alt="" />
           </ImgSm>
           <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
-            <img src="/assets/img/sub/company_04.webp" alt="" />
+            <img src="/assets/img/sub/company_04.jpg" alt="" />
           </ImgSm>
         </Bottom>
       </VisualCompany>

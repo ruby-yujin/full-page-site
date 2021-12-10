@@ -48,10 +48,7 @@ const InfoBox = styled.div`
   p {
     margin: 0 10px;
     font-size: 12px;
-    &:first-child {
-      width: 100%;
-      margin-bottom: 10px;
-    }
+
     &.copy {
       width: 100%;
       margin: 10px 0 0;
@@ -69,6 +66,10 @@ const InfoBox = styled.div`
       margin: 0 5px 8px;
       &.email {
         width: 100%;
+      }
+      &:first-child {
+        width: 100%;
+        margin-bottom: 10px;
       }
     }
   }

@@ -25,7 +25,7 @@ const NoticeDetailCotents = () => {
         </DetailCenter>
         <DetailBottom>
           {details?.[id - 1] ? (
-            <PrevBtn to={`/notice/${id - 1}`}>
+            <PrevBtn to={`/notice/news/${id - 1}`}>
               <i className="icon-prev"></i>
               <div className="hidden-mobile">
                 <span>이전글</span>
@@ -42,11 +42,11 @@ const NoticeDetailCotents = () => {
             </PrevBtnNoLink>
           )}
 
-          <ListBtn to="/notice">
+          <ListBtn to="/notice/news">
             <i className="icon-menu"></i>
           </ListBtn>
           {details?.[id + 1] ? (
-            <NextBtn to={`/notice/${id + 1}`}>
+            <NextBtn to={`/notice/news/${id + 1}`}>
               <div className="hidden-mobile">
                 <span>다음 글</span>
                 <strong>{details?.[id + 1]?.data?.title}</strong>
@@ -127,7 +127,7 @@ const Text = styled.div`
 
 const DetailBottom = styled.div`
   height: 150px;
-  width: 800px;
+  width: 1100px;
   margin: 0 auto;
   display: flex;
   align-items: center;

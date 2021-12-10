@@ -27,7 +27,7 @@ const SubVisual = () => {
           {
             // eslint-disable-next-line react/jsx-key
             subTitle.map((item) => {
-              return <span key={item.code}>{item.code === onlyText ? item.subject : ''}</span>;
+              return <span key={item.subject}>{item.code === onlyText ? item.subject : ''}</span>;
             })
           }
         </p>
@@ -73,7 +73,7 @@ const Title = styled.div`
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 15px;
     span {
       opacity: 0;
       animation: fade-in 0.2s ease-in forwards;

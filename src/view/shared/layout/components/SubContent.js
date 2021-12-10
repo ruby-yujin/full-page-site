@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SubContent = ({ children }) => {
@@ -13,21 +13,28 @@ const SubContent = ({ children }) => {
   const noticeLocation = pageTitle.split('/')[2];
   const details = t('noticeDetail.text', { returnObjects: true });
 
+  console.log(`{/notice/news/${id}}`);
   return (
     <Container>
       <SubContentWrap>
         <Location>
-          <i className="icon-home"></i> HOME <i className="icon-path-4"></i> {onlyText}
-          {details?.[id] ? (
+          <LocationLink to="/">
+            <i className="icon-home"></i> HOME
+          </LocationLink>
+          <i className="icon-path-4"></i> {onlyText}
+          {noticeLocation ? (
             <>
-              <i className="icon-path-4"></i> {details?.[id]?.data?.title}
+              <i className="icon-path-4"></i> {noticeLocation}
             </>
           ) : (
             <></>
           )}
-          {noticeLocation ? (
+          {details?.[id] ? (
             <>
-              <i className="icon-path-4"></i> {noticeLocation}
+              <i className="icon-path-4"></i>
+              <LocationLink to={`/notice/news/${id}`} className="newsTitle">
+                {details?.[id]?.data?.title}
+              </LocationLink>
             </>
           ) : (
             <></>
@@ -73,6 +80,7 @@ const Location = styled.div`
     margin-right: 7px;
   }
   i.icon-path-4 {
+    text-align: center;
     font-size: 10px;
     color: #747474;
     margin: 0 5px;
@@ -82,6 +90,24 @@ const Location = styled.div`
     margin-bottom: 30px;
     i {
       width: 13px;
+    }
+  }
+`;
+
+const LocationLink = styled(Link)`
+  color: #333;
+  &:hover {
+    color: #333;
+  }
+  &.newsTitle {
+    width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media screen and (max-width: 1024px) {
+    &.newsTitle {
+      width: 80px;
     }
   }
 `;

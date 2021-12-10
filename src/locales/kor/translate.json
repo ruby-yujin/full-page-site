@@ -71,7 +71,7 @@
         "aramLee" : "이아람 부장",
         "investmentDivison" : "투자본부",
         "jasonJung" : "Jason 이사",
-        "director" : "Director",
+        "director" : "투자심사",
         "paulLim" : "임정욱 이사",
         "hyunhoCho" : "조현호 심사역",
         "associate" : "투자심사",
@@ -79,7 +79,7 @@
         "analyst" : "투자심사",
         "managementSupport" : "관리본부",
         "soojinPark" : "박수진 팀장",
-        "principal" : "Principal"
+        "principal" : "투자관리"
       }
     ]
   },
@@ -88,7 +88,7 @@
       {
         "id" : 0,
         "title":"신기술사업자에 대한 투자",
-        "description":"신기술을 개발하거나 이를 응용하여 사업화하는 신기술사업자에 대한 투자<br/>(주식, 메자닌 등)"
+        "description":"신기술을 개발하거나 이를 응용하여 사업화하는 투자<br />신기술사업자에 대한 투자<br  className='hidden-mobile' />(주식, 메자닌 등)"
       },
       {
         "id" : 1,
@@ -103,7 +103,7 @@
       {
         "id" : 3,
         "title":"신기술사업투자조합 <br/> 설립 및 운용",
-        "description":"신기술사업자를 대상으로 투자를 진행하는 조합(Fund) 설립 및 <br/> 자금관리운용"
+        "description":"신기술사업자를 대상으로 투자를 진행하는 <br/> 조합(Fund) 설립 및 <br className='hidden-mobile' /> 자금관리운용"
       }
     ]
   },

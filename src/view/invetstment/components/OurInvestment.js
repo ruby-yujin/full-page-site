@@ -10,41 +10,43 @@ const OurInvestment = () => {
   return (
     <Container>
       <ContentsWrap>
-        <SubText className="hidden-desktop">{parse(investmentText[2].title)}</SubText>
+        <SubText className="hidden-desktop" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+          {parse(investmentText[2].title)}
+        </SubText>
         <Item className="img01">
-          <ImgBox data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800">
+          <ImgBox data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
             <img src="/assets/img/sub/investment01.jpg" alt="" />
           </ImgBox>
-          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">
+          <MainText data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
             {parse(investmentText[0].title)}
           </MainText>
-          <Text data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1200">
+          <Text data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
             {parse(investmentText[0].description)}
           </Text>
         </Item>
         <Item className="img02">
-          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
+          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
             <img src="/assets/img/sub/investment02.jpg" alt="" />
           </ImgBox>
-          <MainText data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">
-            {parse(investmentText[1].title)}
+          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800">
+            {parse(investmentText[3].title)}
           </MainText>
-          <Text data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1500">
-            {parse(investmentText[1].description)}
+          <Text data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">
+            {parse(investmentText[3].description)}
           </Text>
         </Item>
         <Item className="img03">
-          <SubText className="pc" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="800">
+          <SubText className="pc" data-aos="fade-up" data-aos-delay="900" data-aos-duration="500">
             {parse(investmentText[2].title)}
           </SubText>
-          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
+          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1100" data-aos-duration="500">
             <img src="/assets/img/sub/investment03.jpg" alt="" />
           </ImgBox>
-          <MainText data-aos="fade-up" data-aos-delay="2000" data-aos-duration="800">
-            {parse(investmentText[3].title)}
+          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="500">
+            {parse(investmentText[1].title)}
           </MainText>
-          <Text data-aos="fade-up" data-aos-delay="3000" data-aos-duration="800">
-            {parse(investmentText[3].description)}
+          <Text data-aos="fade-up" data-aos-delay="1400" data-aos-duration="500">
+            {parse(investmentText[1].description)}
           </Text>
         </Item>
       </ContentsWrap>
@@ -53,17 +55,20 @@ const OurInvestment = () => {
 };
 
 const Container = styled.div`
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1600px) and (min-width: 1024px) {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 `;
 
 const ContentsWrap = styled.div`
   position: relative;
-  padding-right: 480px;
   &:after {
     content: '';
     display: block;
     clear: both;
+  }
+  @media screen and (max-width: 1600px) and (min-width: 1024px) {
   }
   @media screen and (max-width: 1024px) {
     width: 100%;
@@ -73,37 +78,43 @@ const ContentsWrap = styled.div`
 
 const Item = styled.div`
   &.img01 {
+    width: 49%;
+    float: left;
+    max-width: 590px;
   }
   &.img02 {
-    position: absolute;
-    top: 300px;
-    right: 0;
+    width: 48%;
+    float: right;
+    margin-top: 250px;
+    max-width: 480px;
   }
   &.img03 {
+    width: 50%;
     float: left;
     margin-top: 220px;
+    max-width: 480px;
   }
   @media screen and (max-width: 1024px) {
-    &.img01 {
+    &.img01,
+    &.img03 {
+      width: 100%;
       text-align: right;
+      max-width: 100%;
     }
-    &.img02,
+    &.img02 {
+      width: 100%;
+      float: left;
+      text-align: left;
+      max-width: 100%;
+      margin-top: 40px;
+    }
     &.img03 {
       margin-top: 40px;
-      position: initial;
-      top: initial;
-      right: initial;
-      text-align: right;
     }
   }
 `;
 
 const ImgBox = styled.div`
-  width: ${(props) => (props.size === 'md' ? '480px' : '590px')};
-  @media screen and (max-width: 1600px) and (min-width: 1024px) {
-    width: ${(props) => (props.size === 'md' ? '460px' : '460px')};
-  }
-
   @media screen and (max-width: 1024px) {
     width: 100%;
     position: relative;
@@ -134,6 +145,7 @@ const MainText = styled.div`
 
   @media screen and (max-width: 1024px) {
     font-size: 20px;
+    margin-top: 15px;
   }
 `;
 

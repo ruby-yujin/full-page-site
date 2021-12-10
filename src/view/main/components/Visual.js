@@ -22,8 +22,8 @@ const Visual = ({ item }) => {
         </Contents>
         <Background>
           <figure>
-            <video src="/assets/img/main/01.mp4" autoPlay loop muted className="hidden-mobile"></video>
-            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" className="hidden-desktop" />
+            <video src="/assets/img/main/01.mp4" autoPlay loop muted></video>
+            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" />
           </figure>
         </Background>
         <ScrollDown />
@@ -45,6 +45,14 @@ const VisualInner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  i {
+    color: #fff;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -8px;
+    opacity: 0.5;
+  }
 `;
 
 const Background = styled.div`
@@ -62,6 +70,17 @@ const Background = styled.div`
       height: 100% !important;
       object-fit: cover;
     }
+    img {
+      display: none;
+    }
+    @media screen and (max-width: 1024px) {
+      img {
+        display: block;
+      }
+      video {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -78,8 +97,8 @@ const Contents = styled.div`
   p {
     font-size: 26px;
     line-height: 2.19;
-    transition: 1s 0.5s;
     transform: translateY(100px);
+    transition: all 1.5s ease-in-out;
     opacity: 0;
     .inView & {
       transform: none;
