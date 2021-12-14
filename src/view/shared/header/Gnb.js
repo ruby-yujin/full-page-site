@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LanguageMobile from './LanguageMobile';
 
-const Gnb = ({ isActive }) => {
-  const location = useLocation();
-  const pageTitle = String(location.pathname);
+const Gnb = ({ isActive, onClose }) => {
   return (
     <Container className={cn('Gnb', { isActive })}>
       <Nav>
@@ -26,7 +24,7 @@ const Gnb = ({ isActive }) => {
           <Link to="/notice/news">notice</Link>
         </li>
       </Nav>
-      <LanguageMobile />
+      <LanguageMobile onClose={onClose} />
     </Container>
   );
 };

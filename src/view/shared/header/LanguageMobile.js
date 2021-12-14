@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
-const LanguageMobile = () => {
+const LanguageMobile = ({ onClose }) => {
   const { t, i18n } = useTranslation();
   const [isLangsOpen, setIsLangeOpen] = useState(false);
   const langs = ['kor', 'eng'];
@@ -11,10 +11,11 @@ const LanguageMobile = () => {
 
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
+    onClose();
   };
 
   return (
-    <Container className={cn('Language', 'hidden-desktop', { isLangsOpen })}>
+    <Container className={cn('Language', 'hidden-desktop', { isLangsOpen })} onClose={onClose}>
       <LanguageList>
         {langs.map((lang) => {
           return (

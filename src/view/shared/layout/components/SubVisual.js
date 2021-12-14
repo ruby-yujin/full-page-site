@@ -128,6 +128,7 @@ const Title = styled.div`
     }
     h2 {
       font-size: 34px;
+      margin-top: 10px;
     }
   }
 `;

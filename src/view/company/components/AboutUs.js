@@ -17,27 +17,27 @@ const AboutUs = () => {
     <Container>
       <VisualCompany>
         <Top>
-          <ImgLg data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
+          <ImgLg data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800" data-aos-once="false">
             <img src="/assets/img/sub/company_01.jpg" alt="" />
           </ImgLg>
-          <Text data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1400">
+          <Text data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1400" data-aos-once="false">
             <h3>{parse(companyText[0].title)}</h3>
             <p>{parse(companyText[0].description)}</p>
           </Text>
         </Top>
         <Bottom>
-          <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1600">
+          <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1600" data-aos-once="false">
             <img src="/assets/img/sub/company_02.jpg" alt="" />
           </ImgSm>
-          <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2200">
+          <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2200" data-aos-once="false">
             <img src="/assets/img/sub/company_03.jpg" alt="" />
           </ImgSm>
-          <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
+          <ImgSm data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000" data-aos-once="false">
             <img src="/assets/img/sub/company_04.jpg" alt="" />
           </ImgSm>
         </Bottom>
       </VisualCompany>
-      <CompanyMap data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+      <CompanyMap data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" data-aos-once="false">
         <img
           src="/assets/img/sub/company_map.jpg"
           alt="브릿지 인베스트먼트 위치"
@@ -54,7 +54,7 @@ const AboutUs = () => {
           data-aos-delay="800"
           data-aos-duration="1600"
         />
-        <table data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2400">
+        <table data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2400" data-aos-once="false">
           <colgroup>
             <col width="28%" />
             <col width="72%" />

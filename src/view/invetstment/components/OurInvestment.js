@@ -10,42 +10,48 @@ const OurInvestment = () => {
   return (
     <Container>
       <ContentsWrap>
-        <SubText className="hidden-desktop" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+        <SubText
+          className="hidden-desktop"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="800"
+          data-aos-once="false"
+        >
           {parse(investmentText[2].title)}
         </SubText>
         <Item className="img01">
-          <ImgBox data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+          <ImgBox data-aos="fade-up" data-aos-delay="700" data-aos-duration="800" data-aos-once="false">
             <img src="/assets/img/sub/investment01.jpg" alt="" />
           </ImgBox>
-          <MainText data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+          <MainText data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" data-aos-once="false">
             {parse(investmentText[0].title)}
           </MainText>
-          <Text data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+          <Text data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" data-aos-once="false">
             {parse(investmentText[0].description)}
           </Text>
         </Item>
         <Item className="img02">
-          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
+          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800" data-aos-once="false">
             <img src="/assets/img/sub/investment02.jpg" alt="" />
           </ImgBox>
-          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800">
+          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800" data-aos-once="false">
             {parse(investmentText[3].title)}
           </MainText>
-          <Text data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">
+          <Text data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000" data-aos-once="false">
             {parse(investmentText[3].description)}
           </Text>
         </Item>
         <Item className="img03">
-          <SubText className="pc" data-aos="fade-up" data-aos-delay="900" data-aos-duration="500">
+          <SubText className="pc" data-aos="fade-up" data-aos-delay="900" data-aos-duration="500" data-aos-once="false">
             {parse(investmentText[2].title)}
           </SubText>
-          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1100" data-aos-duration="500">
+          <ImgBox size={'md'} data-aos="fade-up" data-aos-delay="1100" data-aos-duration="500" data-aos-once="false">
             <img src="/assets/img/sub/investment03.jpg" alt="" />
           </ImgBox>
-          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="500">
+          <MainText data-aos="fade-up" data-aos-delay="1200" data-aos-duration="500" data-aos-once="false">
             {parse(investmentText[1].title)}
           </MainText>
-          <Text data-aos="fade-up" data-aos-delay="1400" data-aos-duration="500">
+          <Text data-aos="fade-up" data-aos-delay="1400" data-aos-duration="500" data-aos-once="false">
             {parse(investmentText[1].description)}
           </Text>
         </Item>

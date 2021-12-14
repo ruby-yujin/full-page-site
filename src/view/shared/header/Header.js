@@ -7,12 +7,11 @@ import cn from 'classnames';
 import Gnb from './Gnb';
 import Language from './Language';
 import MenuButton from './MenuButton';
-import { LocaleChoose } from './locale';
 
 const Header = () => {
   const location = useLocation();
+
   const [isActive, setIsActive] = useState(false);
-  const [isLangsOpen, setIsLangeOpen] = useState(false);
 
   const toggleGnb = () => {
     setIsActive((v) => !v);
@@ -21,6 +20,10 @@ const Header = () => {
   useEffect(() => {
     isActive && setIsActive(false);
   }, [location]);
+
+  const handleCloseGnb = () => {
+    setIsActive(false);
+  };
 
   return (
     <Container className={cn('Header', { isActive })}>
@@ -35,7 +38,7 @@ const Header = () => {
           <Language />
         </TopHeader>
         <MenuButton onClick={toggleGnb} />
-        <Gnb isActive={isActive} />
+        <Gnb isActive={isActive} onClose={handleCloseGnb} />
       </MainHeader>
     </Container>
   );

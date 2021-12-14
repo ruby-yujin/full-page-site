@@ -8,7 +8,7 @@ const OrganizationChart = () => {
   const teamText = t('team.colleague', { returnObjects: true });
 
   return (
-    <Container data-aos="fade-up" data-aos-delay="800" data-aos-duration="1200">
+    <Container data-aos="fade-up" data-aos-delay="800" data-aos-duration="1200" data-aos-once="false">
       <ChartItem half>
         <Top color={'orange'}>{parse(teamText[0].ceo)}</Top>
         <Bottom>
