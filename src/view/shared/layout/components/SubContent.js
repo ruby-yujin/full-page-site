@@ -99,15 +99,12 @@ const LocationLink = styled(Link)`
   &:hover {
     color: #333;
   }
-  &.newsTitle {
-    width: 140px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
   @media screen and (max-width: 1024px) {
     &.newsTitle {
       width: 80px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 `;
