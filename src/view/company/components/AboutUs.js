@@ -37,7 +37,7 @@ const AboutUs = () => {
           </ImgSm>
         </Bottom>
       </VisualCompany>
-      <CompanyMap data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" data-aos-once="true">
+      <CompanyMap>
         <img
           src="/assets/img/sub/company_map.jpg"
           alt="브릿지 인베스트먼트 위치"
@@ -45,6 +45,7 @@ const AboutUs = () => {
           data-aos="fade-up"
           data-aos-delay="800"
           data-aos-duration="1600"
+          data-aos-once="true"
         />
         <img
           src="/assets/img/sub/company_map_m.jpg"
@@ -53,6 +54,7 @@ const AboutUs = () => {
           data-aos="fade-up"
           data-aos-delay="800"
           data-aos-duration="1600"
+          data-aos-once="true"
         />
         <table data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2400" data-aos-once="true">
           <colgroup>
@@ -163,6 +165,7 @@ const Text = styled.div`
     width: 40%;
   }
   @media screen and (max-width: 1023px) {
+    width: 100%;
     margin-left: 0;
     h3 {
       font-size: 26px;
