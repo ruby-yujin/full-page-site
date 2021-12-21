@@ -22,8 +22,9 @@ const Visual = ({ item }) => {
         </Contents>
         <Background>
           <figure>
-            <video src="/assets/img/main/01.mp4" autoPlay loop muted></video>
-            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" />
+            <img src="/assets/img/main/01_pc.jpg" alt="메인 비주얼" className="hidden-mobile" />
+            {/* <video src="/assets/img/main/01_pc.jpg" autoPlay loop muted></video> */}
+            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" className="hidden-desktop" />
           </figure>
         </Background>
         <ScrollDown />
@@ -70,16 +71,8 @@ const Background = styled.div`
       height: 100% !important;
       object-fit: cover;
     }
-    img {
-      display: none;
-    }
+
     @media screen and (max-width: 1024px) {
-      img {
-        display: block;
-      }
-      video {
-        display: none;
-      }
     }
   }
 `;
