@@ -87,11 +87,11 @@
       {
         "id": 0,
         "title": "신기술사업자에 대한 투자",
-        "description": "신기술을 개발하거나 이를 응용하여 사업화하는 투자<br className='hidden-mobile' />신기술사업자에 대한 투자 (주식, 메자닌 등)"
+        "description": "신기술을 개발하거나 이를 응용하여 사업화하는 <br className='hidden-desktop' />투자신기술사업자에 대한 투자 (주식, 메자닌 등)"
       },
       {
         "id": 1,
-        "title": "신기술사업자를 위한 <br/> 사업 및 기술적 지원",
+        "title": "신기술사업자를 위한 <br className='hidden-mobile'/> 사업 및 기술적 지원",
         "description": "창업 초기 ~ IPO 준비 기업을 위한 <br className='hidden-desktop'/>경영 및 기술 지원, 컨설팅"
       },
       {
@@ -101,7 +101,7 @@
       },
       {
         "id": 3,
-        "title": "신기술사업투자조합 <br/> 설립 및 운용",
+        "title": "신기술사업투자조합 <br className='hidden-mobile'/>설립 및 운용",
         "description": "신기술사업자를 대상으로 투자를 진행하는 <br/> 조합(Fund) 설립 및 자금관리운용"
       }
     ]

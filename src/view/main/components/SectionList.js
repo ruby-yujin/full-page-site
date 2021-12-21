@@ -14,8 +14,6 @@ const SectionList = () => {
   const sections = t('main.sections', { returnObjects: true });
   const [currentPage, setCurrentPage] = useState(0);
 
-  console.log(currentPage);
-
   const handlePageChange = (number) => {
     setCurrentPage(number);
   };

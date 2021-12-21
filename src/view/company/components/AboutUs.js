@@ -11,8 +11,6 @@ const AboutUs = () => {
   const { t } = useTranslation();
   const companyText = t('company.text', { returnObjects: true });
   const commonInfo = t('common.info', { returnObjects: true });
-
-  console.log(companyText);
   return (
     <Container>
       <VisualCompany>
