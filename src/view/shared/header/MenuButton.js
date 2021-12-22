@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function MenuButton({onClick}) {
+export default function MenuButton({ onClick }) {
   return (
     <Container onClick={onClick}>
-      <Line/>
-      <Line/>
-      <Line/>
+      <Line />
+      <Line />
+      <Line />
     </Container>
-  )
+  );
 }
 
 const Container = styled.div`
@@ -17,6 +17,7 @@ const Container = styled.div`
   cursor: pointer;
   width: 30px;
   height: 30px;
+  margin-top: 10px;
 `;
 
 const Line = styled.div`
@@ -24,13 +25,13 @@ const Line = styled.div`
   height: 2px;
   background-color: #fff;
   display: block;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .35s ease-in-out;
-  -ms-transition: all .35s ease-in-out;
-  -o-transition: all .35s ease-in-out;
-  transition: all .35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   .isActive & {
-    background:#fff;
+    background: #fff;
   }
 
   & + & {

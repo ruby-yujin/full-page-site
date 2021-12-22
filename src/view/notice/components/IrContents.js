@@ -3,24 +3,15 @@ import styled from 'styled-components';
 import IrItemGrid from './IrItemGrid';
 import Tab from './Tab';
 
-
 const IrContent = () => {
-    return (
+  return (
     <Container>
-       <Tab/>
-       <IrItemGrid/>
+      <Tab />
+      <IrItemGrid />
     </Container>
-    );
+  );
 };
 
-
-
-
-const Container = styled.div `
-
- 
-`;
-
-
+const Container = styled.div``;
 
 export default IrContent;

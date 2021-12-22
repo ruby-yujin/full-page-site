@@ -22,9 +22,8 @@ const Visual = ({ item }) => {
         </Contents>
         <Background>
           <figure>
-            <img src="/assets/img/main/01_pc.jpg" alt="메인 비주얼" className="hidden-mobile" />
-            {/* <video src="/assets/img/main/01_pc.jpg" autoPlay loop muted></video> */}
-            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" className="hidden-desktop" />
+            <video src="/assets/img/main/01.mp4" autoPlay loop muted></video>
+            <img src="/assets/img/main/01.jpg" alt="메인 비주얼" />
           </figure>
         </Background>
         <ScrollDown />
@@ -71,8 +70,16 @@ const Background = styled.div`
       height: 100% !important;
       object-fit: cover;
     }
-
+    img {
+      display: none;
+    }
     @media screen and (max-width: 1024px) {
+      img {
+        display: block;
+      }
+      video {
+        display: none;
+      }
     }
   }
 `;
@@ -87,6 +94,7 @@ const Contents = styled.div`
   flex-direction: column;
   justify-content: center;
   color: #fff;
+  top: -10%;
   p {
     font-size: 26px;
     line-height: 2.19;
