@@ -125,7 +125,7 @@ const Contents = styled.div`
     padding: 0 2%;
     text-align: center;
     max-width: 100%;
-    margin-top: -270px;
+    top: -15%;
     p {
       font-size: 16px;
       line-height: 1.88;
