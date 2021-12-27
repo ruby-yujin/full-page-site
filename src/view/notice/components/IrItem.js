@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const IrItem = ({ item }) => {
   return (
     <Container to={item.data.fileSrc} download target="_blank">
-      <span>{item.data.date}</span>
+      <span>{item.data.year}</span>
       <p>
         {item.data.title}
         <span>{item.data.period}</span>
@@ -27,6 +27,7 @@ const Container = styled(Link)`
   justify-content: space-evenly;
   align-items: flex-start;
   span {
+    display: block;
     font-size: 18px;
     font-weight: 500;
     color: #ef8226;

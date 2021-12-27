@@ -7,6 +7,12 @@ import LanguageMobile from './LanguageMobile';
 const Gnb = ({ isActive, onClose }) => {
   return (
     <Container className={cn('Gnb', { isActive })}>
+      <Logo>
+        <Link to="/">
+          <img src="/assets/img/common/logo.svg" className="pc-logo" alt="브릿지 인베스트먼트 로고" />
+          <img src="/assets/img/common/logo_m.svg" className="m-logo" alt="브릿지 인베스트먼트 로고" />
+        </Link>
+      </Logo>
       <Nav>
         <li>
           <Link to="/">Home</Link>
@@ -50,6 +56,24 @@ const Container = styled.div`
   .isActive & {
     visibility: visible;
     opacity: 1;
+  }
+`;
+const Logo = styled.h1`
+  position: fixed;
+  top: 40px;
+  left: 100px;
+  .m-logo {
+    display: none;
+  }
+  @media screen and (max-width: 1024px) {
+    top: 28px;
+    left: 33px;
+    .pc-logo {
+      display: none;
+    }
+    .m-logo {
+      display: block;
+    }
   }
 `;
 

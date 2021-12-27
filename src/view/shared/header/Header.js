@@ -10,8 +10,10 @@ import MenuButton from './MenuButton';
 
 const Header = () => {
   const location = useLocation();
+  const pathname = location.pathname;
 
   const [isActive, setIsActive] = useState(false);
+  const [darkColor, setDarkColor] = useState(false);
 
   const toggleGnb = () => {
     setIsActive((v) => !v);
@@ -25,22 +27,33 @@ const Header = () => {
     setIsActive(false);
   };
 
+  const isTerms = pathname === '/terms/privacy' || pathname === '/terms/credit';
+
   return (
-    <Container className={cn('Header', { isActive })}>
-      <MainHeader>
-        <Logo>
-          <Link to="/">
-            <img src="/assets/img/common/logo.svg" className="pc-logo" alt="브릿지 인베스트먼트 로고" />
-            <img src="/assets/img/common/logo_m.svg" className="m-logo" alt="브릿지 인베스트먼트 로고" />
-          </Link>
-        </Logo>
-        <TopHeader>
-          <Language />
-        </TopHeader>
-        <MenuButton onClick={toggleGnb} />
-        <Gnb isActive={isActive} onClose={handleCloseGnb} />
-      </MainHeader>
-    </Container>
+    <>
+      <Container className={cn('Header', { isActive, isTerms })}>
+        <MainHeader>
+          <Logo>
+            {isTerms ? (
+              <Link to="/">
+                <img src="/assets/img/common/logo_blue.svg" className="pc-logo" alt="브릿지 인베스트먼트 로고" />
+                <img src="/assets/img/common/logo_blue_m.svg" className="m-logo" alt="브릿지 인베스트먼트 로고" />
+              </Link>
+            ) : (
+              <Link to="/">
+                <img src="/assets/img/common/logo.svg" className="pc-logo" alt="브릿지 인베스트먼트 로고" />
+                <img src="/assets/img/common/logo_m.svg" className="m-logo" alt="브릿지 인베스트먼트 로고" />
+              </Link>
+            )}
+          </Logo>
+          <TopHeader>
+            <Language />
+          </TopHeader>
+          <MenuButton onClick={toggleGnb} />
+          <Gnb isActive={isActive} onClose={handleCloseGnb} />
+        </MainHeader>
+      </Container>
+    </>
   );
 };
 
@@ -51,10 +64,8 @@ const Container = styled.header`
   right: 0;
   z-index: 1000;
   background: none;
-
-  &.IsMainHeader {
-    position: fixed;
-    background: #000;
+  &.isTerms {
+    box-shadow: 1px 1px 1px #f4f4f4;
   }
 `;
 
@@ -78,7 +89,6 @@ const MainHeader = styled.div`
 
 const Logo = styled.h1`
   position: relative;
-  z-index: 1000;
   .m-logo {
     display: none;
   }

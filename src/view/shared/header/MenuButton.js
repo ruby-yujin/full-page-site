@@ -31,7 +31,10 @@ const Line = styled.div`
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   .isActive & {
-    background: #fff;
+    background: #fff !important;
+  }
+  .isTerms & {
+    background: #000;
   }
 
   & + & {

@@ -14,9 +14,7 @@ const NoticeContents = () => {
         {titles.map((item) => {
           return (
             <Link to={`${item.id}`} key={item.id}>
-              <p>
-                {item.data.title} {item.id}
-              </p>
+              <p>{item.data.title}</p>
               <FiChevronRight />
             </Link>
           );
@@ -28,6 +26,7 @@ const NoticeContents = () => {
 
 const Container = styled.div`
   margin-top: 120px;
+  min-height: 130px;
   @media screen and (max-width: 1024px) {
     margin-top: 0;
   }

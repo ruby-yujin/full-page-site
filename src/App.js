@@ -13,6 +13,8 @@ import Notice from './pages/Notice';
 
 import NoticeDetail from './pages/NoticeDetail';
 import Ir from './pages/Ir';
+import Privacy from './pages/Privacy';
+import Credit from './pages/Credit';
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +32,8 @@ const App = () => {
         <Route exact path="/notice/news" element={<Notice />} />
         <Route exact path="/notice/news/:id" element={<NoticeDetail />} />
         <Route exact path="/notice/ir" element={<Ir />} />
+        <Route exact path="/terms/privacy" element={<Privacy />} />
+        <Route exact path="/terms/credit" element={<Credit />} />
       </Routes>
     </Container>
   );

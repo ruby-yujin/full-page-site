@@ -45,6 +45,9 @@ const LanguageOpen = styled.button`
   font-size: 18px;
   color: #fff;
   font-weight: 500;
+  .isTerms & {
+    color: #333;
+  }
 `;
 const LanguageList = styled.div`
   position: absolute;

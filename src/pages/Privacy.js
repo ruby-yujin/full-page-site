@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import NoticeContainer from '../view/notice/container/NoticeContainer';
+import TemrsContainer from '../view/terms/container/TermsContainer';
 
-const Notice = () => {
+const Privacy = () => {
   return (
     <Container>
-      <NoticeContainer />
+      <TemrsContainer />
     </Container>
   );
 };
 
 const Container = styled.div``;
 
-export default Notice;
+export default Privacy;
