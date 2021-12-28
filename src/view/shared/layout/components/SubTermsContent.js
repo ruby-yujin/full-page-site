@@ -18,7 +18,7 @@ const SubContentWrap = styled.div`
   max-width: 1600px;
   position: relative;
   background: #fff;
-  padding: 160px 200px 350px;
+  padding: 160px 200px 130px;
   @media (max-width: 1024px) {
     position: initial;
     min-height: auto;
