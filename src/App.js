@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { GlobalStyle } from './style/GlobalStyle.Styled';
+import ScrollToTop from './lib/ScrollTop';
 import Main from './pages/Main';
 import Company from './pages/Company';
 import Team from './pages/Team';
@@ -23,8 +24,9 @@ const App = () => {
 
   return (
     <Container>
+      <ScrollToTop />
       <GlobalStyle />
-      <Routes>
+      <Routes onUpdate={() => window.scrollTo(0, 0)}>
         <Route exact path="/" element={<Main />} />
         <Route exact path="/company" element={<Company />} />
         <Route exact path="/team" element={<Team />} />

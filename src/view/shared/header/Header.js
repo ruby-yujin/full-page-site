@@ -13,7 +13,6 @@ const Header = () => {
   const pathname = location.pathname;
 
   const [isActive, setIsActive] = useState(false);
-  const [darkColor, setDarkColor] = useState(false);
 
   const toggleGnb = () => {
     setIsActive((v) => !v);

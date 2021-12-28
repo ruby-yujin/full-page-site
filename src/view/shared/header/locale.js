@@ -9,13 +9,9 @@ export const locale = () => {
 };
 
 export const LocaleChoose = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [isLangsOpen, setIsLangeOpen] = useState(false);
   const currentLang = i18n.resolvedLanguage;
-
-  const toggleLangs = () => {
-    setIsLangeOpen((v) => !v);
-  };
 
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
@@ -27,7 +23,6 @@ export const LocaleChoose = () => {
     <Container className={cn('Language', 'hidden-mobile', { isLangsOpen })}>
       <LanguageList>
         {langs.map((lang) => {
-          console.log(currentLang === lang);
           return (
             <LanguageBtn key={lang} onClick={() => changeLang(lang)} className={currentLang === lang ? 'isActive' : ''}>
               {lang}

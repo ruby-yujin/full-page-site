@@ -13,7 +13,6 @@ const SubContent = ({ children }) => {
   const noticeLocation = pageTitle.split('/')[2];
   const details = t('noticeDetail.text', { returnObjects: true });
 
-  console.log(`{/notice/news/${id}}`);
   return (
     <Container>
       <SubContentWrap>

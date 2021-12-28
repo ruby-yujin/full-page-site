@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, useParams, useLocation, useMatch } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Tab = () => {
   // const history = useHistory();
   const location = useLocation();
   const pageTitle = String(location.pathname);
   // const params = useParams();
-  console.log('이거 pageTitle', pageTitle);
+  // console.log('이거 pageTitle', pageTitle);
 
   return (
     <Container>
