@@ -10,7 +10,7 @@ const Section = ({ item }) => {
     () => {
       // console.log('section inVIEW');
     },
-    { rootMargin: '-300px 0px' }
+    { rootMargin: '-100px 0px' }
   );
 
   return (

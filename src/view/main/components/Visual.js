@@ -8,9 +8,9 @@ import ScrollDown from './ScrollDown';
 const Visual = ({ item }) => {
   const [sectionRef, inView] = useInViewRef(
     () => {
-      // console.log('inVIEW');
+      console.log('inVIEW');
     },
-    { rootMargin: '-300px 0px' }
+    { rootMargin: '-100px 0px' }
   );
 
   return (
