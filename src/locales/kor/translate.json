@@ -87,7 +87,7 @@
       {
         "id": 0,
         "title": "신기술사업자에 대한 투자",
-        "description": "신기술을 개발하거나 이를 응용하여 사업화하는 <br className='hidden-desktop' />투자신기술사업자에 대한 투자 (주식, 메자닌 등)"
+        "description": "신기술을 개발하거나 이를 응용하여 사업화하는 <br className='hidden-desktop' />투자신기술사업자에 대한 투자 <br className='hidden-mobile' />(주식, 메자닌 등)"
       },
       {
         "id": 1,

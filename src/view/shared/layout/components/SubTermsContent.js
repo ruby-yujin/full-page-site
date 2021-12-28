@@ -1,6 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useParams, useLocation, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SubTermsContent = ({ children }) => {
@@ -21,7 +19,6 @@ const SubContentWrap = styled.div`
   position: relative;
   background: #fff;
   padding: 160px 200px 350px;
-  min-height: 1160px;
   @media (max-width: 1024px) {
     position: initial;
     min-height: auto;
