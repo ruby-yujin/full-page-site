@@ -65,8 +65,8 @@
       {
         "ceo": " CEO",
         "junhyukLee": "Junhyuk Lee",
-        "managingPartner": "Managing Partner",
-        "complianceOfficer": "Compliance Officer",
+        "managingPartner": "Chief Executive Officer",
+        "complianceOfficer": "Compliance/ Risk Management",
         "aramLee": "Aram Lee",
         "investmentDivison": "Investment Divison",
         "jasonJung": "Jason Jung",
@@ -76,9 +76,9 @@
         "associate": "Associate",
         "ethanPark": "Ethan Park",
         "analyst": "Analyst",
-        "managementSupport": "Management Support",
+        "managementSupport": "Management Support Divison",
         "soojinPark": "Soojin Park",
-        "principal": "Principal"
+        "principal": "Manager"
       }
     ]
   },
