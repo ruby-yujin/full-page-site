@@ -17,7 +17,7 @@ const OrganizationChart = () => {
         </Bottom>
       </ChartItem>
       <ChartItem half>
-        <Top color={'black'}>{parse(teamText[0].complianceOfficer)}</Top>
+        <Top color={'black'}>{parse(teamText[0].complianceOfficerRiskManagement)}</Top>
         <Bottom>
           <strong>{parse(teamText[0].aramLee)}</strong>
           <span>{parse(teamText[0].complianceOfficer)}</span>
