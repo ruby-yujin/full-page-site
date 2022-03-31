@@ -152,6 +152,14 @@
     "downfile": [
       {
         "data": {
+          "year": "2022",
+          "title": "제1기 정기주주총회 개최내역",
+          "period": "2022.03.31",
+          "fileSrc": "/download/file/정기주주총회 결의사항_20220331.pdf"
+        }
+      },
+      {
+        "data": {
           "year": "2021",
           "title": "경영공시(결산공시)",
           "period": "",
